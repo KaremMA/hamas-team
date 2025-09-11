@@ -1,0 +1,83 @@
+<html>
+
+
+<head>
+
+    <title>hamas-cars</title>
+    <link rel="stylesheet" href="stylenow.css">
+</head>
+
+<body>
+
+  <header class="topbox">
+    <div class="container">
+      <h1 class="brand">HAMAS</h1>
+      <nav>
+        <a href="index now.html">Home</a>
+        <a href="carsnow.html">Show cars</a>
+        <a href="loginnow.html" id="auth-link">تسجيل دخول</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <h2>كل السيارات</h2>
+      <div>
+        <span id="welcome"></span>
+        <button class="btn" id="add-car-toggle">أضف سيارة جديدة</button>
+      </div>
+    </section>
+
+    <section id="add-car-form" class="card hidden">
+      <h3>إضافة سيارة جديدة</h3>
+      <form id="newCarForm">
+        <label>العلامة التجارية
+          <input type="text" id="car-brand" required />
+        </label>
+        <label>الموديل
+          <input type="text" id="car-model" required />
+        </label>
+        <label>السنة
+          <input type="number" id="car-year" min="1900" max="2050" required />
+        </label>
+        <label>المحرك (مثال: 2.0L Turbo)
+          <input type="text" id="car-engine" />
+        </label>
+        <label>عدد الركاب
+          <input type="number" id="car-seats" min="1" max="20" />
+        </label>
+        <label>السعر في اليوم (USD)
+          <input type="number" id="car-price-day" step="0.01" />
+        </label>
+        <label>السعر في الساعة (USD)
+          <input type="number" id="car-price-hour" step="0.01" />
+        </label>
+        <label>الوصف
+          <textarea id="car-desc"></textarea>
+        </label>
+
+        
+          <button class="btn" type="submit">حفظ السيارة</button>
+          <button type="button" class="btn outline" id="cancelAdd">إلغاء</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="cars-list" class="grid"></section>
+  </main>
+
+  <div id="car-modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close" id="closeModal">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">© HAMAS</div>
+  </footer>
+    
+
+</body>
+</html>
